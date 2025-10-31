@@ -36,7 +36,7 @@ vector<string> offlineMesgModel::query(int userid)
 {
     // 1. 组装sql语句
     char sql[1024] = {0};
-    sprintf(sql, "select message from OfflineMessage where id = %d", userid);
+    sprintf(sql, "select message from OfflineMessage where userid = %d", userid);
 
     // 使用mysql c API进行查询
     vector<string> vec;
